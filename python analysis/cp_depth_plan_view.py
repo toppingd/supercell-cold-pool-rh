@@ -261,7 +261,7 @@ def cp_data(run,ds0,f,cx_in,cy_in):
       
     cp_mask = cp_isolated==0
     cp_mask_3d = np.broadcast_to(cp_mask, np.shape(b))
-    combined_mask = (b>-0.01)# | (lh>-1e-4) #| (th_pert>-0.1)
+    combined_mask = (b>-0.01)
     cpd_condition = cp_mask_3d | combined_mask
 
     cpd_i = np.argmax(cpd_condition, axis=0)
